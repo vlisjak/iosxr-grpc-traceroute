@@ -12,6 +12,16 @@ https://github.com/nleiva/xrgrpc/blob/v0.6.0/proto/ems/ems_grpc.proto
 python -m grpc_tools.protoc --proto_path=. ./iosxr.proto --python_out=. --grpc_python_out=.
 ```
 
+## Router config
+```
+RP/0/RP0/CPU0:Headend#show run formal grpc
+grpc port 57344
+grpc no-tls
+grpc 
+grpc address-family ipv4
+grpc service-layer 
+```
+
 # Sample script results
 ```
 (myvenv310) vlisjak@vlisjak:~/mygrpc$ python ./sr_traceroute.py 
