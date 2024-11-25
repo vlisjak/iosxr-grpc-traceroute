@@ -1,12 +1,16 @@
-## Install
+## Install python dependencies
+```
 python -m pip install grpcio
 python -m pip install protobuf
+```
 
 ## Download .proto file
 https://github.com/nleiva/xrgrpc/blob/v0.6.0/proto/ems/ems_grpc.proto
 
 ## Create stubs
+```
 python -m grpc_tools.protoc --proto_path=. ./iosxr.proto --python_out=. --grpc_python_out=.
+```
 
 # Sample script results
 ```
