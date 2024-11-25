@@ -16,6 +16,9 @@ import json
 if __name__ == "__main__":
 
     target = "10.52.157.183:57344"
+    username = "cisco"
+    password = "cisco123"
+
     lsp_name = "srte_c_10_ep_1.1.1.8"
     lsp_endpoint = "10.0.0.8"
     lsp_source = "1.1.1.10"
@@ -37,8 +40,8 @@ if __name__ == "__main__":
     }
 
     metadata = (
-        ("username", "cisco"),
-        ("password", "cisco123"),
+        ("username", username),
+        ("password", password),
     )
 
     with grpc.insecure_channel(target, options=(("grpc.enable_http_proxy", 0),)) as channel:
